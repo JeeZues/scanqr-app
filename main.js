@@ -52,6 +52,11 @@ var finish = function(result) {
   document.querySelector("#text").innerText = result;
   showElements(false);
   playSound(false);
+  
+  // Auto open URL and restart
+  window.open(document.querySelector("#text").value);
+  start();
+  scanSnapshot();
 };
 
 onload = function() {
